@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-image: url(https://thumbs.dreamstime.com/b/commercial-airplane-flying-above-clouds-backside-view-beautiful-sunset-light-190808942.jpg);
+  background-size: cover
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+.btn{
+  padding: 10px 60px;
+  background-color: blue;
+  color: aliceblue;
+  font-size: 20px;
+
+}
+</style>
+</head>
+<body>
+
+<div class="about-section">
+  <h1>About Us Page</h1>
+  <p>For more information please visit our partners contact urls.</p>
+  <p>Airtrail gives you all necessities and security as per guidelines of government of India</p>
+  <p><button class="btn" onclick="window.location.href='/'">Website</button></p>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="https://i.ndtvimg.com/i/2016-12/spicejet-650-400_650x400_81482304911.jpg" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>SpiceJet</h2>
+        <p class="title">Budget Airline</p>
+        <p>Best Budget Airlines and headquatered by Gurgaon, Haryana</p>
+        <p>https://www.spicejet.com/ </p>
+        <p><button class="button" href="https://www.spicejet.com/">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="https://images.livemint.com/img/2021/09/28/1600x900/b5afe0de-a2b4-11eb-9703-d2c358e85cf6_1626174820288_1632832082947.jpg" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>IndiGo</h2>
+        <p class="title">Popular Airlines</p>
+        <p>Most Popular Airlines with a large network in India</p>
+        <p>https://www.goindigo.in/</p>
+        <p><button class="button" href="https://www.goindigo.in/">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="https://cdn.wionews.com/sites/default/files/styles/story_page/public/2020/05/09/139861-air-india-pti.jpg" alt="John" style="width:100%">
+      <div class="container">
+        <h2>AirIndia</h2>
+        <p class="title">Cheapest Airlines</p>
+        <p>Best airlines with more than 30destinations in india</p>
+        <p>https://www.airindia.in/</p>
+        <p><button class="button" href="https://www.airindia.in/">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

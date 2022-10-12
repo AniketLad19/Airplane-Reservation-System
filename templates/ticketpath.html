@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicketPath</title>
+<style>
+    body{
+        background-image: url(https://wallpapercave.com/wp/wp2574287.jpg);
+        background-size: cover;
+    }
+    .align {
+  display: grid;
+  place-items: center;
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+body {
+  color: #888;
+  font-family: sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 40px;
+  margin-top: 1.5em;
+  color: brown;
+  margin-bottom: 1.5em;
+}
+
+button{
+    padding: 12px 80px;
+    background-color: black;
+    font-size: 25px;
+    color: aliceblue;
+}
+
+p {
+  margin-bottom: 1.5em;
+  margin-top: 1.5em;
+}
+
+input {
+  font: inherit;
+  outline: 0;
+}
+
+.form__field {
+  position: relative;
+}
+
+.form__field .icon {
+  position: absolute;
+  right: 1em;
+  top: 50%;
+  transform: translateY(-50%)
+}
+
+.form__input {
+  border-radius: 0.25em;
+  border-style: solid;
+  border-width: 2px;
+  font-size: 1.5rem;
+  padding: 0.5em 4em 0.5em 2em;
+}
+
+.form__input:valid {
+  border-color: forestgreen;
+}
+
+.form__input:valid + .icon::after {
+  content: '😃';
+}
+
+.form__input:invalid {
+  border-color: firebrick;
+}
+
+.form__input:invalid + .icon::after {
+  content: '😳';
+}
+</style>
+</head>
+<body>
+{% with messages=get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+
+      <div class="alert alert-{{category}}" role="alert">
+        {{message}}
+      </div>
+
+
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+    <body class="align">
+
+        <h1>Enter your Email Id for Departure Ticket</h1>
+      
+        <form action="/reserved" method="post">
+      
+          <div class="form__field">
+            <input type="email" name="email" class="form__input" pattern="{@gmail.com}" required>
+            <span class="icon"></span>
+          </div>
+        <p><center><button type="submit">Departure Ticket</button></center></p>
+    </form>
+      </body>
+      <h1>Enter your Email id for Return Ticket</h1>
+      
+      <form action="/return" method="post">
+    
+        <div class="form__field">
+          <input type="email" name="email" class="form__input" pattern="{@gmail.com}" required>
+          <span class="icon"></span>
+        </div>
+      <p><center><button type="submit">Return Ticket</button></center></p>
+    </form>  
+    </body>
+</body>
+</html>

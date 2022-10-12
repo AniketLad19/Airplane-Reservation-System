@@ -1,0 +1,126 @@
+{% with messages=get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+
+      <div class="alert alert-success" role="alert">
+        {{message}}
+      </div>
+
+
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<html>
+<head>
+<style>
+*{
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body{
+  background-image: url(https://thumbs.dreamstime.com/b/commercial-airplane-flying-above-clouds-backside-view-beautiful-sunset-light-190808942.jpg);
+  background-size: cover;
+}
+ul {
+  padding: 0;
+  position:relative;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+  list-style:none;
+  width:955px;
+  height:450px;
+  border-radius:3px;
+  overflow:hidden;
+  box-shadow:1px 1px 3px 1px;
+}
+
+
+li {
+  position:relative;
+  width:190px;
+  height:450px;
+  float:left;
+  border-left:1px solid white;
+  -webkit-transition:all 0.7s;
+  -moz-transition:all 0.7s;
+  transition:all 0.7s;
+  box-shadow:-2px 0 10px 2px;
+}
+
+ul li:first-child {
+  border:none;
+}
+
+span {
+  display:block;
+  position:absolute;
+  bottom:0;
+  width:50%;
+  color:white;
+  white-space:nowrap;
+  padding:20px;
+
+
+}
+
+img {
+  width:800px;
+  height:450px;
+}
+
+ul:hover li {
+  width:50px;  
+}
+
+
+ul li:hover {
+  width:750px;
+}
+.btn{
+  float: right;
+  margin-top: 2rem;
+  background-color: blue;
+  border-radius: 30px;
+  padding: 15px 50px;
+  font-size: 20px;
+  color: aliceblue;
+}
+
+</style>
+</head>
+    <body>
+      <div><br><br>
+        <center><h1 style="color: blue;">Airtrail Covering States</h1></center></div>
+    <ul>
+    <li>
+      <span>Maharashtra</span>
+      <img src='https://www.hindustantimes.com/rf/image_size_960x540/HT/p2/2017/05/07/Pictures/assignment-name-in-brief_e2e4d316-333c-11e7-aae9-524ad91d2809.JPG' />
+    </li>
+    
+    <li>
+      <span>Goa</span>
+      <img src='https://images.thrillophilia.com/image/upload/s--RGls1uh9--/c_fill,f_auto,fl_strip_profile,g_auto,h_600,q_auto,w_975/v1/images/photos/000/360/442/original/1604731951_shutterstock_1023774148.jpg.jpg?1604731951' /></li>
+    
+    <li>
+      <span>Delhi</span>
+      <img src='https://tds.indianeagle.com/wp-content/uploads/2019/11/Winter-places-in-delhi.jpg' /></li>
+    
+    <li>
+      <span>Bengal</span>
+      <img src='https://www.thehistoryhub.com/wp-content/uploads/2014/04/Victoria-Memorial-Side-View.jpg' />
+    </li>
+    
+    <li>
+      <span>Karnataka</span>
+      <img src='https://assets.thehansindia.com/h-upload/2020/08/26/994112-visakhapatnam.jpg' />
+    </li>
+  </ul>
+  <button class="btn" onclick="window.location.href='/fo';">Next</button>
+  <a href="/lout">Logout</a>
+  </body>
+
+ </html> 

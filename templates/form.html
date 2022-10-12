@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airtrail Booking Form</title>
+    <style>
+        body{
+    background-image: url(https://thumbs.dreamstime.com/b/commercial-airplane-flying-above-clouds-backside-view-beautiful-sunset-light-190808942.jpg);
+    background-size: cover;
+}
+#form{
+    background-color: #000;
+    height:600px;
+    width:700px;
+    margin:auto;
+    padding:20px;
+    opacity: 0.7;
+}
+#form h3{
+    border-bottom: 2px solid #3399ff;
+    width:210px;
+    padding: 5px;
+}
+::placeholder{
+    color:#fff
+}
+#input #input-group{
+    width:300px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff
+}
+#input2 #input-group{
+    width:195px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff
+}
+#input3 #input-group{
+    margin-left: 50px;
+}
+#input4 #input-group{
+    width:300px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff
+}
+#input4 #input-group1{
+    width:615px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff
+}
+#input5 h3{
+    border-bottom: 2px solid #3399ff;
+    width:220px;
+    padding: 5px;
+}
+#input6 #input-group{
+    width:300px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff
+}
+#input6 #input-group1{
+    width:615px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff
+}
+label{
+    color: #fff;
+}
+
+    </style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<style>
+   
+</style>
+</head>
+<body>
+    <div class="container">
+
+        <form class="form-group" action="/reserve" method="post">
+            <h1 class="text-center">Airtrail Booking Form</h1>
+            <div id="form">
+                <h3 class="text-white">Booking Details</h3>
+            <div id="input"><!--input-->
+                <select  id="input-group" style="background: black;" name="startfrom">
+                    <option value="">From</option>
+                    <option value="Mumbai(CSIA)">Mumbai(CSIA)</option>
+                    <option value="Pune(PIA)">Pune(PIA)</option>
+                    <option value="Goa(GIA)">Goa(GIA)</option>
+                    <option value="Bengaluru(KIAB)">Bengaluru(KIAB)</option>
+                    <option value="Kolkata(NSCBIA)">Kolkata(NSCBIA)</option>
+                    <option value="Delhi(IGIA)">Delhi(IGIA)</option>
+                </select>
+                <select  id="input-group" style="background: black;" name="destination">
+                    <option value="">To</option>
+                    <option value="Mumbai(CSIA)">Mumbai(CSIA)</option>
+                    <option value="Pune(PIA)">Pune(PIA)</option>
+                    <option value="Goa(GIA)">Goa(GIA)</option>
+                    <option value="Bengaluru(KIAB)">Bengaluru(KIAB)</option>
+                    <option value="Kolkata(NSCBIA)">Kolkata(NSCBIA)</option>
+                    <option value="Delhi(IGIA)">Delhi(IGIA)</option>
+                </select>
+                <label for="d_date">Departure Date</label><input type="date" id="input-group" placeholder="Departure Date" name="departure date">
+                <br><label for="d_time">Departure Time</label><input type="time" id="input-group" placeholder="Departure Time" name="departure time">
+                <select  id="input-group" style="background: black;" name="airline">
+                    <option value="">Preffered Airline</option>
+                    <option value="IndiGo">IndiGo</option>
+                    <option value="AirIndia">AirIndia</option>
+                    <option value="SpiceJet">SpiceJet</option>
+                </select>
+                <select  id="input-group" style="background: black;" name="seating">
+                    <option value="">Preffered Seating</option>
+                    <option value="Economy">Economy Class</option>
+                    <option value="Business">Business Class</option>
+                    <option value="First">First Class</option>
+                </select>
+                </div>
+
+                <div id="input2">
+                    <input type="number" id="input-group" placeholder="Adult" name="adult">
+                    <input type="number" id="input-group" placeholder="Children(2-11years)" name="children">
+                    <input type="number" id="input-group" placeholder="infant(under 2years)" name="infant">
+                </div>
+
+                <div id="input3">
+                    <input type="radio" id="input-group" name="trip" value="oneway">
+                    <label class="text-white" for="input-group">One Way</label>
+                    <input type="radio" id="input-group" name="trip" value="roundtrip">
+                    <label class="text-white" for="input-group">Round Trip</label>
+                </div>
+
+                <div id="input4">
+                    <label for="d_date">Return Date</label><input type="date" id="input-group" placeholder="Return Date" name="return date">
+                    <br><label for="d_date">Return Time</label><input type="time" id="input-group" placeholder="Return time" name="return time">
+                    <br><input type="text" id="input-group1" placeholder="Any Message" name="msg">
+                </div>
+
+                <div id="input5">
+                    <h3 class="text-white">Personal Details</h3>
+                </div>
+
+                <div id="input6">
+                    <input type="text" id="input-group" placeholder="Full Name" name="full name">
+                    <input type="number" id="input-group" placeholder="Phone Number" name="phone">
+                    <input type="email" id="input-group1" placeholder="Email" name="email">
+                </div><br>
+                <center><button type="submit"  class="btn btn-warning text-white">Submit Form</button>
+                <button type="reset" class="btn btn-primary">Clear Form</button></center>
+            </div>
+
+        </form>
+
+    </div>
+</body>
+</html>

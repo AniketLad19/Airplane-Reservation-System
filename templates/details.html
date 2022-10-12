@@ -1,0 +1,89 @@
+{% with messages=get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+
+      <div class="alert alert-{{category}}" role="alert">
+        {{message}}
+      </div>
+
+
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Details</title>
+    <style>
+      *{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+  background-image: url("https://thumbs.dreamstime.com/b/commercial-airplane-flying-above-clouds-backside-view-beautiful-sunset-light-190808942.jpg");
+  background-size: cover;
+}
+h1{
+  color: aqua;
+}
+u{
+  color: aqua;
+}
+    </style>
+</head>
+<body>
+    <center><u><h1>Welcome Aniket</h1></u>
+    <br>
+
+        <h2>Recent Bookings</h2>
+    </center>
+        <br><br>
+        <table border="1px">
+        
+            <tr>
+            <th>From</th>
+            <th>Destination</th>
+            <th>Departure Date</th>
+            <th>Departure Time</th>
+            <th>Preferred Airline</th>
+            <th>Preferred Seating</th>
+            <th>Adult</th>
+            <th>Childrens(2-11yrs)</th>
+            <th>Infants(under 2yrs)</th>
+            <th>Trip</th>
+            <th>Return Date</th>
+            <th>Return Time</th>
+            <th>Any Message</th>
+            <th>Full Name</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            
+          </tr>
+          {% for i in a %}
+          <tr>
+            <td>{{i[0]}}</td>
+            <td>{{i[1]}}</td>
+            <td>{{i[2]}}</td>
+            <td>{{i[3]}}</td>
+            <td>{{i[4]}}</td>
+            <td>{{i[5]}}</td>
+            <td>{{i[6]}}</td>
+            <td>{{i[7]}}</td>
+            <td>{{i[8]}}</td>
+            <td>{{i[9]}}</td>
+            <td>{{i[10]}}</td>
+            <td>{{i[11]}}</td>
+            <td>{{i[12]}}</td>
+            <td>{{i[13]}}</td>
+            <td>{{i[14]}}</td>
+            <td>{{i[15]}}</td>
+            
+          </tr>
+          {% endfor %}
+        </body>
+        </html>
+        
+        
+</body>
+</html>
